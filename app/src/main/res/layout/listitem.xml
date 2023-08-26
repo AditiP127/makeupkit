@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="110dp"
+android:layout_height="match_parent"
+android:layout_marginLeft="20dp"
+android:layout_marginTop="10dp"
+    android:id="@+id/ColorCard"
+android:layout_marginRight="20dp"
+app:cardCornerRadius="20dp">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/Colorname"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="serif"
+        android:textSize="20dp"
+        android:padding="2dp"
+        android:text="Color Name"/>
+
+    <TextView
+        android:id="@+id/hexValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Color Valuie"
+        android:layout_marginTop="20dp"/>
+</LinearLayout>
+</androidx.cardview.widget.CardView>

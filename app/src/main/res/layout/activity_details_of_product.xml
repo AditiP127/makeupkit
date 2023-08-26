@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MainActivity"
+android:background="@drawable/color_bg">
+
+<com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="450dp"
+    android:fitsSystemWindows="true"
+    android:id="@+id/appBar">
+
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/color_bg"
+        app:contentScrim="@drawable/color_bg"
+        app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+        android:fitsSystemWindows="true"
+        android:id="@+id/collapsing_toolbar"
+        app:expandedTitleTextAppearance="@style/TextAppearance.Design.CollapsingToolbar.Expanded"
+        app:collapsedTitleTextAppearance="@style/TextAppearance.AppCompat.Title">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/imageTodisplay"
+            android:layout_gravity="right"
+            android:src="@drawable/foundation"></ImageView>
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_collapseMode="pin"/>
+
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+</com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:background="@drawable/curve_bg"
+        android:paddingTop="10dp"
+        app:layout_anchor="@+id/appBar"
+        app:layout_anchorGravity="top|center"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="7dp"
+            android:paddingTop="7dp"
+            android:paddingRight="7dp"
+            android:paddingBottom="7dp"
+
+            tools:context=".Activities.DetailsOfProduct">
+
+
+            <TextView
+                android:id="@+id/nameTodisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="serif"
+                android:text="Name "
+                android:textColor="@color/black"
+                android:textSize="35dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+            <TextView
+                android:id="@+id/BrandTodisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="100dp"
+                android:fontFamily="serif"
+                android:text="Brand "
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+            <TextView
+                android:id="@+id/Price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="172dp"
+                android:layout_marginLeft="172dp"
+                android:layout_marginTop="100dp"
+                android:fontFamily="serif"
+                android:text="$"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                app:layout_constraintStart_toStartOf="@+id/BrandTodisplay"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+            <TextView
+                android:id="@+id/PriceTodisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="100dp"
+                android:fontFamily="serif"
+                android:text="Price "
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                app:layout_constraintStart_toStartOf="@id/Price"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="148dp"
+                android:fontFamily="serif"
+                android:text="Product type"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/TypeTodisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="236dp"
+                android:layout_marginLeft="236dp"
+                android:layout_marginTop="148dp"
+                android:fontFamily="serif"
+                android:text="type"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="210dp"
+                android:fontFamily="serif"
+                android:text="Available Shades"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/colors_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="230dp"
+                android:orientation="horizontal"
+                android:scrollbars="horizontal"
+                app:reverseLayout="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:id="@+id/Description"
+                android:layout_marginTop="20dp"
+                android:fontFamily="serif"
+                android:textSize="20dp"
+                android:layout_gravity="center_vertical|end"
+                android:textColor="#70493f"
+                app:layout_constraintTop_toBottomOf="@+id/colors_recycler_view"></TextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Paris Beauty App</string>
+
+    <string name="Quantity_Msg">Quantity is more than available Stock</string>
+
+    <string name="less_quantity">"Quantity is less than 0"</string>
+
+    <string name="emailPattern">"[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"</string>
+
+    <string name="fieldEmpty">"Field can't be Empty"</string>
+
+    <string name="validEmail">"Please Enter valid email address"</string>
+
+    <string name="validPassword">"Please Enter valid password"</string>
+
+    <string name="loginscuess">"Login successfully!"</string>
+
+    <string name="namePattern">"^([a-zA-Z]{2,}\\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\\s?([a-zA-Z]{1,})?)"</string>
+
+    <string name="registerScuess">"Registered successfully!"</string>
+
+    <string name="validName">"Please Enter valid Full Name"</string>
+</resources>
